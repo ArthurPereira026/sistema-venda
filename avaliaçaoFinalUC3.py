@@ -8,19 +8,9 @@ estoque = {
 }
 carrinho = {}
 
+
 while True:
-    print("""
-    ----------------------------------------------
-      SEJA BEM-VINDO AO ➡ WIFI EXPRESS STORE 🛜
-    ----------------------------------------------
-           -> OPÇÕES DISPONIVEIS PARA VC <-
-    ----------------------------------------------        
-    [1]  Visualizar Estoque      
-    [2]  Adicionar item ao Carrinho
-    [3]  Visualizar Carrinho
-    [4]  Finalizar Compra
-    [0]  Sair do Sistema 
-    \n""")
+    menu()
 
     opcao = int(input("Escolha a opção que deseja: "))
 
@@ -30,6 +20,22 @@ while True:
 
         case 2:
             adicionar_ao_carrinho(estoque, carrinho)
+
+        case 3:
+            carrinho_atual(carrinho)
+
+        case 4:
+            finalizar_compra(carrinho,estoque)
+
+        case 0:
+            print("Obrigado por utilizar nosso sistema volte sempre ao WIFI EXPRESS STORE 🛜")
+            break
+        case _:
+            print("Opção invalida😥!Por Favor digite uma da opções validas abaixo")
+
+
+
+
 
 
 
